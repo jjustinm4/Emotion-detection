@@ -5,9 +5,9 @@ from keras.models import model_from_json #necessary for loading the previously b
 from keras.preprocessing import image #for preprocessing ne single image to be fed to the neural network
 
 #loading model
-model = model_from_json(open("fer.json", "r").read())
+model = model_from_json(open("model.json", "r").read())
 #loading weights
-model.load_weights('fer.h5')
+model.load_weights('model.h5')
 
 
 face_haar_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
